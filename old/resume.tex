@@ -1,0 +1,150 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX:
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+    \textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%                      % Change font of \section command
+    \usefont{OT1}{phv}{b}{n}%       % bch-b-n: CharterBT-Bold font
+    \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+\subsectionfont{%                      % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%       % bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-4pt}{2pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}          % Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}       % Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+        \Huge \usefont{OT1}{phv}{b}{n} #1 \hfill
+        \par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+        \large \usefont{OT1}{phv}{m}{n} \textit{#1} \hfill
+        \par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+        \noindent\hangindent=2em\hangafter=0 % Indentation
+        \parbox{\spacebox}{        % Box to align text
+        \textit{#1}}               % Entry name (birth, address, etc.)
+        \hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\EducationEntry}[4]{
+        \noindent \textbf{#1} \hfill      % Study
+        \colorbox{Black}{%
+            \parbox{6em}{%
+            \hfill\color{White}#2}} \par  % Duration
+        \noindent \textit{#3} \par        % School
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+\newcommand{\WorkEntry}[4]{               % Same as \EducationEntry
+        \noindent \textbf{#1} \hfill      % Jobname
+        \colorbox{Black}{\color{White}#2} \par  % Duration
+        \noindent \textit{#3} \par              % Company
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+        \normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%   \vspace*{-2em}
+%       \includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Ryan Grose}
+\MySlogan{ Curriculum Vitae}
+
+\sepspace
+
+\NewPart{Summary}
+Computer science student studying abroad in Stockholm for a full year. Focused on software correctness and machine learning.
+GPA: 3.7
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Relevant Coursework/Key Skills}{}
+
+\begin{itemize}
+	\item \textbf{Software Reliability}: A master class in modern and practical techniques for software testing and reliability modeling. (currently enrolled)
+	\item \textbf{Artificial Intelligence} Designed and implemented Hidden Markov Models and different game heuristics (respectively) as part of group research projects. Results presented to a board of professors.
+	\item \textbf{Machine Learning Advanced}: Derived and implemented machine learning standards such as Support Vector Machines, Markov Models, and Kernel PCA denoising.
+	\item \textbf{Software Design and Implementation}: Techniques for software correctness such as representation invariants, software specification, and design patterns.
+	\item \textbf{Fundamentals}: Standard computer science classes such as data structures, algorithms, databases, etc.
+
+\end{itemize}
+
+\subsection*{Skills}
+
+\SkillsEntry{\textbf{}}{\textsc{Java}, \textsc{Matlab}, \textsc{Linux}, \textsc{Git}, \textsc{Python}, \textsc{Vim}}
+
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Experience}{}
+
+\EducationEntry{IT Intern}{Summer 2015}{Benefit Solutions Inc.}{Developed automatic check-in app for Android that informs relevant employees when guest checks in. Observed Agile Scrum development cycle in different team settings. Co-ordinated with different teams for technical support. }
+\sepspace
+
+\EducationEntry{Teaching Assistant}{2013-2014}{Kamiak High School}{Worked with industry professionals to teach Java to high school students.}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry{Kungliga Tekniska Högskolan}{July 2016-}{Royal Institute of Technology in Stockholm}{Studying abroad at KTH, Sweden’s largest and most prestigious technical university.}
+\sepspace
+
+\EducationEntry{University of Washington}{2014-2018}{Department of Computer Science}{Majoring in Computer \& Data Science with a minor in Swedish. }
+
+
+\end{document}

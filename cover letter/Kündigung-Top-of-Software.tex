@@ -1,0 +1,61 @@
+\documentclass[11pt]{dinbrief}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% \usepackage{mathptmx} % Fuer Times auf 12pt umstellen!
+\usepackage{mathpazo} % Fuer Palatino auf 11pt umstellen!
+\usepackage{url}
+
+\def\briefkopf{ {
+\huge{\textbf{\sffamily \textit{Ryan Grose}}}
+\hrulefill \\  }
+\raggedleft{\large{
+%\sffamily
+Björksätravägen 30 1302 Skärholmen Sverige \\ Phone: +46-079-013\,59\,15\\ } 
+ \large{\textit{
+ \hspace{20mm} E-Mail: ryanwgrose\,@\,gmail.com}}} }
+
+\address{\briefkopf}
+\signature{(Ryan Grose)}
+
+\backaddress{Ryan Grose, Tullastraße 70, D-76131 Karlsruhe}
+\nowindowrules                 %% keine Rahmen um das Adreﬂfenster
+
+\def\enclname{Anlage}
+\newenvironment{myquote}{\begin{quote}\footnotesize}{\end{quote}}
+\sloppy %                                  ja, trotz allem...
+\begin{document}
+%\setaddressheight {3cm}       %% Address (add your own backslashes)
+\begin{letter} {Person Name\\Grünberger Str. 54\\D-10245 Berlin}
+%\postremark {Einschreiben mit R¸ckschein}
+%\handling{Eilt sehr!}
+\centeraddress                 %% Vertikeles Zentrieren der Anschrift
+% \setreflinetop{120mm}        %% Oberkante Bezugszeichenzeile = Briefanfang
+
+%% This stuff is for reference eg customer numbers or other bureaucratic info
+\def\yourmailmsg{} %% This is the first field heading
+\def\signmsg{}
+\def\phonemsg{}
+%% \yourmail{ryanwgrose@gmail.com}%% Info for first field
+% \sign{Meine Firma}           %% Info for second field 
+% \phone{12345}{ 67890}        %% Info for third field
+
+\date{\today}
+
+\subject{\textbf{Subject Name}}
+\opening{Sehr geehrte Damen und Herren,}
+
+hiermit kündige ich mein Sofatutor-Abonnement zum Ablauf des aktuellen Pakets (07.02.2013).
+Ich bitte Sie, mir die Kündigung schriftlich zu bestätigen!
+
+ 
+%\pagebreak                    %% Seitenumbruch bei Bedarf
+
+\closing{Yours sincerely,}
+
+%\ps{}                                  %% PS:
+%\encl{}                                %% Appendix
+%\cc{}                                  %% Mailing List
+\end{letter}
+
+\end{document}
