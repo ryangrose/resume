@@ -3,5 +3,5 @@
 .PHONY : default
 default : 
 	# xelatex cv.tex
-	xelatex cv-general.tex
+	xelatex cv.tex
 
