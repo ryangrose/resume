@@ -1,5 +1,7 @@
 %!TEX TS-program = xelatex
 \documentclass[]{friggeri-cv}
+\defaultfontfeatures{
+    Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome/}
 \usepackage{fontawesome}
 % \addbibresource{bibliography.bib}
 
@@ -12,30 +14,27 @@
 % In the aside, each new line forces a line break
 \begin{aside}
   \section{python}
-    django
-    chalice
-    selenium
+    spark
     boto3
-    mxnet
+    fastapi
+    poetry
   \section{aws}
     s3
-    lambda
-    cognito
-    sagemaker
-    dynamodb
+    iam
+    cloudformation
     ec2
-  \section{javascript}
-    react
-    vuejs
-    idyll/d3
+    lambda
+    chalice
+    dynamodb
   \section{other}
-    git
-    haskell
-    java/c/c++
     sql
+    databricks
+    jenkins
+    docker
+    ci/cd
   \section{education}
     UW CSE 2018
-    Data Science
+    Data Specialization
     ~
     Year abroad:
     Stockholm, Sweden
@@ -47,29 +46,38 @@
     \href{https://www.linkedin.com/in/ryanwgrose}{linkedin/ryanwgrose \faLinkedin}
     425.361.5666 \faPhone
     ~
-    6200 Norma Beach Rd
-    98026 Edmonds
-    Washington
+    305 W 45th St
+    New York, NY
 \end{aside}
 
 \section{experience}
 
 \begin{entrylist}
   \entry
-    {fall 2018-}
+    {2020 - now}
+    {Data Engineer}
+    {\href{https://www.point72.com/}{Point72}}
+    {
+      Scaled world-class market research with efficient data infrastructure and fast ETL pipelines for alternative data (structured and unstructured) using pyspark, databricks, docker, jenkins.
+Led project to build automated services and APIs, reducing lead time for data publication and distribution from days to minutes (python, fastapi).
+Designed new transaction data ETL pipeline, reducing runtime on 200 machine cluster from 32 hours to 2 hours on our most valuable data (spark, sql).
+Mentored junior members and managed intern program.
+    }
+  \entry
+    {2018 - 2020}
     {Co-founder + Data Engineer}
     {\href{http://www.curie.co/}{Curie}}
-    {Co-founded a multi-million dollar AI startup (CurieVision). Designed and built everything data: multimedia data scraping + pipelines, computer vision models, REST APIs, inference, and testing. Used AWS serverless stack for lean, scalable, and iterable development. Crossed over into other responsibilities such as front-end, recruitment, product management.}
+    {Co-founded multi-million dollar AI startup (CurieVision). Designed and built everything data: multimedia data pipelines, computer vision models, APIs, ML inference, and testing. Patent pending for novel machine-learning pipeline architecture. Used AWS serverless stack for lean, scalable, and iterable development. Crossed over into other responsibilities such as front-end, recruitment, product management.} 
   \entry
     {spring 2018}
     {Software Engineering Intern - Part Time}
     {\href{http://www.kernellabs.io/}{Kernel Labs}}
-    {Built legal disclosure API and webapp prototype (\href{https://asidero.com}{asidero.com}). Tracked, modeled, and stored lobbying compliance information using Django Rest Framework + PostgreSQL. Created internal dashboard template + login with automated AWS deployment.}
+    {Designed and built legal disclosure service \href{https://asidero.com}{asidero.com}. Tracked, modeled, and stored lobbying compliance information using Django Rest Framework + PostgreSQL. Created internal dashboard template + login with automated AWS deployment.}
   \entry
-    {win 2018}
+    {winter 2018}
     {Software Engineering Intern - Full Time}
     {\href{http://www.kernellabs.io/}{Kernel Labs}}
-    {Prototyped and built authorizing consent webapp from conception to deployment and marketing to prevent automated disasters in production. Built using django, nginx, jquery, and trustedkey.}
+    {Prototyped authorizing consent webapp from conception to deployment and marketing to prevent automated disasters in production. Built using django, nginx, jquery, and trustedkey.}
   % \entry
     % {sum 2015}
     % {IT Intern}
@@ -87,19 +95,19 @@
 \begin{entrylist}
   \entry
     {spring 2018}
-    {\href{https://idyll-lang.org/gallery/stepping-into-the-filter}{Image Filter Lesson}}
-    {Idyll Gallery Examples}
-    {Wrote an interactable article demonstrating how image filters and kernels work for the Idyll Gallery. Built with Idyll of course, a language for data visualization combining React, Markup, and D3.}
-  \entry
-    {spring 2018}
     {\href{https://github.com/ryangrose/easy-pandoc-templates}{easy pandoc templates}}
     {Personal Project}
-    {Created, curated, and modified pandoc templates to instantly convert documents from anywhere. Converts many document formats (markdown, latex, etc) to html or pdf with dropin abilities for vim.}
+    {Create quality markdown documents with easy-to-use templates: averaging ~50 downloads worldwide per day. Created, curated, and modified pandoc templates to instantly convert documents from anywhere. Supports many document formats (markdown, latex, etc) to html or pdf with dropin capabilities for vim.}
+  \entry
+    {spring 2018}
+    {\href{https://idyll-lang.org/gallery/stepping-into-the-filter}{Image Filter Lesson}}
+    {Idyll Gallery Examples}
+    {Wrote an interactive article demonstrating how image filters and kernels work for the Idyll Gallery. Built for Idyll, a language for data visualization combining React, Markup, and D3.}
    \entry
     {jan 2017}
     {Data Denoising}
     {Team Research Project}
-    {Developed a Kernel PCA denoiser and compared different kernel functions in character recognition}
+    {Developed a Kernel PCA denoiser and compared different kernel functions in character recognition.}
   % \entry
     % {fall 2016}
     % {Chess AI Search Depth}
